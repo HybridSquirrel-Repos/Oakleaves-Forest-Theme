@@ -1,6 +1,6 @@
 local forest = {
     --16 colors
-    forest0_gui = "#1c1c2b",
+    forest0_gui = "#2a282c",
     forest1_gui = "#3B4252",
     forest2_gui = "#434C5E",
     forest3_gui = "#4C566A",
