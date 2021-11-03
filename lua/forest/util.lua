@@ -14,7 +14,7 @@ vim.cmd(hl)
     if color.link then vim.cmd("highlight! link " .. group .. " " .. color.link) end
 end
 
--- Only define nord if it's the active colorscheme
+-- Only define forest if it's the active colorscheme
 function util.onColorScheme()
     if vim.g.colors_name ~= "forest" then
         vim.cmd [[autocmd! forest]]
