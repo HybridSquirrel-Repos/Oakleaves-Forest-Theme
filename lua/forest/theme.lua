@@ -59,7 +59,7 @@ theme.loadSyntax = function ()
         syntax.Keyword = { fg = forest.blue, bg = forest.none, style = 'italic' } -- italic for, do, while, etc.
         syntax.Repeat =	{ fg = forest.blue, bg = forest.none, style = 'italic' } -- italic any other keyword
         syntax.Comment = { fg = forest.green, bg = forest.none, style = 'italic' } -- italic comments
-        syntax.Function = { fg = forest.green, bg = forest.none, style = 'italic' } -- italic funtion names
+        syntax.Function = { fg = forest.cyan, bg = forest.none, style = 'italic' } -- italic funtion names
         syntax.Identifier = { fg = forest.blue, bg = forest.none, style = 'italic' }; -- any variable name
         syntax.String = { fg = forest.brown, bg = forest.none, style= 'italic' } -- any string
     else
@@ -256,10 +256,10 @@ theme.loadTreeSitter = function ()
     treesitter.TSConditional = { fg = forest.blue } -- For keywords related to conditionnals.
     treesitter.TSKeyword = { fg = forest.blue } -- For keywords that don't fall in previous categories.
     treesitter.TSRepeat = { fg = forest.blue } -- For keywords related to loops.
-    treesitter.TSKeywordFunction = { fg = forest.green }
-    treesitter.TSFunction = { fg = forest.green } -- For fuction (calls and definitions).
-    treesitter.TSMethod = { fg = forest.green } -- For method calls and definitions.
-    treesitter.TSFuncBuiltin = { fg = forest.green }
+    treesitter.TSKeywordFunction = { fg = forest.cyan }
+    treesitter.TSFunction = { fg = forest.cyan } -- For fuction (calls and definitions).
+    treesitter.TSMethod = { fg = forest.cyan } -- For method calls and definitions.
+    treesitter.TSFuncBuiltin = { fg = forest.cyan }
     treesitter.TSVariable = { fg = forest.forest4_gui } -- Any variable name that does not have another highlight.
     treesitter.TSVariableBuiltin = { fg = forest.forest4_gui }
 
