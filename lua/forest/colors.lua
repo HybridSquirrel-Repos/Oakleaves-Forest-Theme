@@ -1,25 +1,80 @@
 local forest = { --chnage everything here and in theme config file 
 
     --16 colors
+    red = "#ff5647", -- red
+    yellow = "#d9b72b", -- yellow
+    blue = "#6c95eb", -- blue
+    gray = "#787878", -- gray
+    green = "#85c46c", -- green
+    mangenta = "#d688d4", -- mangenta
+    cyan = "#39cc8f", -- cyan
+    darkgray = "#595959", -- dark gray
+    brown = "#686868", -- white
+    darkbrown = "#262626", -- background
+    white = "#dbdbdb", -- white 
+    brown = "#c9a26d", -- string
+    pink = "#ed94c0", -- numbers
+    lightblue = "#66c3cc", -- escape char
+    purple = "#c191ff", -- classes/strucs
+    darkgreen = "#487d34", -- special comment
+
+
+    brightred ="#ff8870", -- bright red
+    brightgreen ="#adeb96", -- bright green
+    brightyellow = "#f5d86a", -- bright yellow
+    brightblue = "#add3ff", -- bright blue
+    brightmagenta = "#ffbffe", -- bright magenta
+    brightcyan = "#7df0c0", -- bright cyan
+    none = "NONE"
+    
+    
+    
+    
+
+    --[[
+
+
+  nord0_gui = "#2E3440"        ,
+  nord1_gui = "#3B4252"        ,
+  nord2_gui = "#434C5E"        ,
+  nord3_gui = "#4C566A"        ,
+  nord3_gui_bright = "#616E88" ,
+  nord4_gui = "#D8DEE9"        ,
+  nord5_gui = "#E5E9F0"        ,
+  nord6_gui = "#ECEFF4"        ,
+  nord7_gui = "#8FBCBB"        ,
+  nord8_gui = "#88C0D0"        ,
+  nord9_gui = "#81A1C1"        ,
+  nord10_gui = "#5E81AC"       ,
+  nord11_gui = "#BF616A"       ,
+  nord12_gui = "#D08770"       ,
+  nord13_gui = "#EBCB8B"       ,
+  nord14_gui = "#A3BE8C"       ,
+  nord15_gui = "#B48EAD"       ,
+  none =          'NONE'
+
     forest0_gui = "#262626", --background
-    forest1_gui = "#3B4252", -- 
-    forest2_gui = "#434C5E", -- 
+    forest1_gui = "#3B4252", -- maybe dot methods 
+    forest2_gui = "#434C5E", -- highlight
     forest3_gui = "#85c46c", -- comments -- not comments its , and . 
-    forest3_gui_bright = "#85c46c",--"#616E88", --
+    forest3_gui_bright = "#85c46c", -- comments
     forest4_gui = "#D8DEE9", --
     forest5_gui = "#E5E9F0", -- text
     forest6_gui = "#ECEFF4", -- 
     forest7_gui = "#39cc8f", -- functions
     forest8_gui = "#39cc8f", -- methods
     forest9_gui = "#6c95eb", -- keywords
-    forest10_gui = "#616E88", -- command line autocmp bg
+    forest10_gui = "#616E88", -- command line autocmp bg and maybe dot methods
     forest11_gui = "#ff5647", -- error
-    forest12_gui = "#D08770", -- not in use
+    forest12_gui = "#D08770", -- not in use?
     forest13_gui = "#EBCB8B", -- terminal color?
     forest14_gui = "#c9a26d", -- strings
     forest15_gui = "#ed94c0", -- numbers
-    none =          'NONE'
+    none =          'NONE' ]]--
 }
+
+
+
 
 -- Enable contrast sidebars, floating windows and popup menus
 if vim.g.forest_contrast == true then
@@ -70,6 +125,7 @@ local allcolors = {
 "#595959", -- dark gray
 "#686868", -- white
 "#262626", -- background
+"#dbdbdb", -- white 
 
 
 "#ff8870", -- bright red
@@ -92,6 +148,7 @@ local truecolors = {
 "#ed94c0", -- numbers
 "#66c3cc", -- varibles
 "#d688d4", -- escaped charaters
+
 "#66c3cc", --like \n
 "#c9a26d", -- strings
 "#c191ff", -- classes

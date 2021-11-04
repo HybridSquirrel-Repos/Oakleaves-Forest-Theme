@@ -5,71 +5,71 @@ local theme = {}
 theme.loadSyntax = function ()
     -- Syntax highlight groups
     local syntax = {
-        Type = { fg = forest.forest9_gui }, -- int, long, char, etc.
-        StorageClass = { fg = forest.forest9_gui }, -- static, register, volatile, etc.
-        Structure = { fg = forest.forest9_gui }, -- struct, union, enum, etc.
-        Constant = { fg = forest.forest4_gui }, -- any constant
-        Character = { fg = forest.forest14_gui }, -- any character constant: 'c', '\n'
-        Number = { fg = forest.forest15_gui }, -- a number constant: 5
-        Boolean = { fg = forest.forest9_gui }, -- a boolean constant: TRUE, false
-        Float = { fg = forest.forest15_gui }, -- a floating point constant: 2.3e10
-        Statement = { fg = forest.forest9_gui }, -- any statement
-        Label = { fg = forest.forest9_gui }, -- case, default, etc.
-        Operator = { fg = forest.forest9_gui }, -- sizeof", "+", "*", etc.
-        Exception = { fg = forest.forest9_gui }, -- try, catch, throw
-        PreProc = { fg = forest.forest9_gui }, -- generic Preprocessor
-        Include = { fg = forest.forest9_gui }, -- preprocessor #include
-        Define = { fg = forest.forest9_gui }, -- preprocessor #define
-        Macro = { fg = forest.forest9_gui }, -- same as Define
-        Typedef = { fg = forest.forest9_gui }, -- A typedef
-        PreCondit = { fg = forest.forest13_gui }, -- preprocessor #if, #else, #endif, etc.
-        Special = { fg = forest.forest4_gui }, -- any special symbol
-        SpecialChar = { fg = forest.forest13_gui }, -- special character in a constant
-        Tag = { fg = forest.forest4_gui }, -- you can use CTRL-] on this
-        Delimiter = { fg = forest.forest6_gui }, -- character that needs attention like , or .
-        SpecialComment = { fg = forest.forest8_gui }, -- special things inside a comment
-        Debug = { fg = forest.forest11_gui }, -- debugging statements
+        Type = { fg = forest.pink }, -- int, long, char, etc.
+        StorageClass = { fg = forest.blue }, -- static, register, volatile, etc.
+        Structure = { fg = forest.blue }, -- struct, union, enum, etc.
+        Constant = { fg = forest.blue }, -- any constant
+        Character = { fg = forest.brown }, -- any character constant: 'c', '\n'
+        Number = { fg = forest.pink }, -- a number constant: 5
+        Boolean = { fg = forest.blue }, -- a boolean constant: TRUE, false
+        Float = { fg = forest.pink }, -- a floating point constant: 2.3e10
+        Statement = { fg = forest.blue }, -- any statement
+        Label = { fg = forest.blue }, -- case, default, etc.
+        Operator = { fg = forest.white }, -- sizeof", "+", "*", etc.
+        Exception = { fg = forest.blue }, -- try, catch, throw
+        PreProc = { fg = forest.blue }, -- generic Preprocessor
+        Include = { fg = forest.blue }, -- preprocessor #include
+        Define = { fg = forest.blue }, -- preprocessor #define
+        Macro = { fg = forest.blue }, -- same as Define
+        Typedef = { fg = forest.blue }, -- A typedef
+        PreCondit = { fg = forest.blue }, -- preprocessor #if, #else, #endif, etc.
+        Special = { fg = forest.mangenta }, -- any special symbol
+        SpecialChar = { fg = forest.mangenta }, -- special character in a constant //change
+        Tag = { fg = forest.purple }, -- you can use CTRL-] on this
+        Delimiter = { fg = forest.white }, -- character that needs attention like , or .
+        SpecialComment = { fg = forest.darkgreen }, -- special things inside a comment
+        Debug = { fg = forest.red }, -- debugging statements
         -- text that stands out, HTML link
-        Underlined = { fg = forest.forest14_gui, bg = forest.none, style = 'underline' }, 
-        Ignore = { fg = forest.forest1_gui }, -- left blank, hidden
+        Underlined = { fg = forest.blue, bg = forest.none, style = 'underline' }, 
+        Ignore = { fg = forest.darkgray }, -- left blank, hidden //change
         -- any erroneous construct
-        Error = { fg = forest.forest11_gui, bg = forest.none, style = 'bold,underline' },
+        Error = { fg = forest.red, bg = forest.none, style = 'bold,underline' },
         -- anything that needs extra attention; mostly the keywords TODO FIXME and XXX
-        Todo = { fg = forest.forest13_gui, bg = forest.none, style = 'bold,italic' }, 
-        Conceal = { fg = forest.none, bg = forest.forest0_gui },
+        Todo = { fg = forest.brightyellow, bg = forest.none, style = 'bold,italic' }, 
+        Conceal = { fg = forest.none, bg = forest.darkbrown },
 
 
-        htmlLink = { fg = forest.forest14_gui, style = "underline" },
-        htmlH1 = { fg = forest.forest8_gui, style = "bold" },
-        htmlH2 = { fg = forest.forest11_gui, style = "bold" },
-        htmlH3 = { fg = forest.forest14_gui, style = "bold" },
-        htmlH4 = { fg = forest.forest15_gui, style = "bold" },
-        htmlH5 = { fg = forest.forest9_gui, style = "bold" },
-        markdownH1 = { fg = forest.forest8_gui, style = "bold" },
-        markdownH2 = { fg = forest.forest11_gui, style = "bold" },
-        markdownH3 = { fg = forest.forest14_gui, style = "bold" },
-        markdownH1Delimiter = { fg = forest.forest8_gui },
-        markdownH2Delimiter = { fg = forest.forest11_gui },
-        markdownH3Delimiter = { fg = forest.forest14_gui },
+        htmlLink = { fg = forest.blue, style = "underline" },
+        htmlH1 = { fg = forest.purple, style = "bold" },
+        htmlH2 = { fg = forest.purple, style = "bold" },
+        htmlH3 = { fg = forest.purple, style = "bold" },
+        htmlH4 = { fg = forest.purplue, style = "bold" },
+        htmlH5 = { fg = forest.purple, style = "bold" },
+        markdownH1 = { fg = forest.purple, style = "bold" },
+        markdownH2 = { fg = forest.purple, style = "bold" },
+        markdownH3 = { fg = forest.purple, style = "bold" },
+        markdownH1Delimiter = { fg = forest.purple },
+        markdownH2Delimiter = { fg = forest.purple },
+        markdownH3Delimiter = { fg = forest.purple },
     }
 
     -- Italic comments
     if vim.g.forest_italic == true then
-        syntax.Conditional = { fg = forest.forest9_gui, bg = forest.none, style = 'italic' } -- italic if, then, else, endif, switch, etc.
-        syntax.Keyword = { fg = forest.forest9_gui, bg = forest.none, style = 'italic' } -- italic for, do, while, etc.
-        syntax.Repeat =	{ fg = forest.forest9_gui, bg = forest.none, style = 'italic' } -- italic any other keyword
-        syntax.Comment = { fg = forest.forest3_gui_bright, bg = forest.none, style = 'italic' } -- italic comments
-        syntax.Function = { fg = forest.forest8_gui, bg = forest.none, style = 'italic' } -- italic funtion names
-        syntax.Identifier = { fg = forest.forest9_gui, bg = forest.none, style = 'italic' }; -- any variable name
-        syntax.String = { fg = forest.forest14_gui, bg = forest.none, style= 'italic' } -- any string
+        syntax.Conditional = { fg = forest.blue, bg = forest.none, style = 'italic' } -- italic if, then, else, endif, switch, etc.
+        syntax.Keyword = { fg = forest.blue, bg = forest.none, style = 'italic' } -- italic for, do, while, etc.
+        syntax.Repeat =	{ fg = forest.blue, bg = forest.none, style = 'italic' } -- italic any other keyword
+        syntax.Comment = { fg = forest.green, bg = forest.none, style = 'italic' } -- italic comments
+        syntax.Function = { fg = forest.green, bg = forest.none, style = 'italic' } -- italic funtion names
+        syntax.Identifier = { fg = forest.blue, bg = forest.none, style = 'italic' }; -- any variable name
+        syntax.String = { fg = forest.brown, bg = forest.none, style= 'italic' } -- any string
     else
-        syntax.Comment = {fg = forest.forest3_gui_bright} -- normal comments
-        syntax.Conditional = { fg = forest.forest9_gui } -- normal if, then, else, endif, switch, etc.
-        syntax.Keyword = { fg = forest.forest9_gui } -- normal for, do, while, etc.
-        syntax.Repeat =	{ fg = forest.forest9_gui } -- normal any other keyword
-        syntax.Function = { fg = forest.forest8_gui} -- normal function names
-        syntax.Identifier = { fg = forest.forest9_gui}; -- any variable name
-        syntax.String = { fg = forest.forest14_gui } -- any string
+        syntax.Comment = {fg = forest.green} -- normal comments
+        syntax.Conditional = { fg = forest.blue } -- normal if, then, else, endif, switch, etc.
+        syntax.Keyword = { fg = forest.blue } -- normal for, do, while, etc.
+        syntax.Repeat =	{ fg = forest.blue } -- normal any other keyword
+        syntax.Function = { fg = forest.cyan } -- normal function names
+        syntax.Identifier = { fg = forest.blue }; -- any variable name
+        syntax.String = { fg = forest.brown } -- any string
     end
 
 return syntax
@@ -80,22 +80,22 @@ end
 theme.loadEditor = function ()
     -- Editor highlight groups
     local editor = {
-        NormalFloat = { fg = forest.forest4_gui, bg = forest.float }, -- normal text and background color
-        ColorColumn = { fg = forest.none, bg = forest.forest1_gui }, --  used for the columns set with 'colorcolumn'
+        NormalFloat = { fg = forest.white, bg = forest.float }, -- normal text and background color
+        ColorColumn = { fg = forest.none, bg = forest.darkgray }, --  used for the columns set with 'colorcolumn'
         -- placeholder characters substituted for concealed text (see 'conceallevel')
-        Conceal = { fg = forest.forest1_gui },
-        Cursor = { fg = forest.forest4_gui, bg = forest.none, style = 'reverse' }, -- the character under the cursor
+        Conceal = { fg = forest.darkgray },
+        Cursor = { fg = forest.white, bg = forest.none, style = 'reverse' }, -- the character under the cursor
 
         -- like Cursor, but used when in IME mode
-        CursorIM = { fg = forest.forest5_gui, bg = forest.none, style = 'reverse' },
-        Directory = { fg = forest.forest7_gui, bg = forest.none }, -- directory names (and other special names in listings)
-        DiffAdd = { fg = forest.forest14_gui, bg = forest.none, style = 'reverse' }, -- diff mode: Added line
-        DiffChange = { fg = forest.forest12_gui, bg = forest.none, style = 'reverse' }, --  diff mode: Changed line
-        DiffDelete = { fg = forest.forest11_gui, bg = forest.none, style = 'reverse' }, -- diff mode: Deleted line
+        CursorIM = { fg = forest.white, bg = forest.none, style = 'reverse' },
+        Directory = { fg = forest.brightblue, bg = forest.none }, -- directory names (and other special names in listings)
+        DiffAdd = { fg = forest.cyan, bg = forest.none, style = 'reverse' }, -- diff mode: Added line
+        DiffChange = { fg = forest.yellow, bg = forest.none, style = 'reverse' }, --  diff mode: Changed line
+        DiffDelete = { fg = forest.red, bg = forest.none, style = 'reverse' }, -- diff mode: Deleted line
 
         -- diff mode: Changed text within a changed line
-        DiffText = { fg = forest.forest15_gui, bg = forest.none, style = 'reverse' }, 
-        EndOfBuffer = { fg = forest.forest1_gui },
+        DiffText = { fg = forest.brightyellow, bg = forest.none, style = 'reverse' }, 
+        EndOfBuffer = { fg = forest.darkgray },
         ErrorMsg = { fg = forest.none },
         Folded = { fg = forest.forest_3_gui_bright, forest.none, style = 'italic' },
         FoldColumn = { fg = forest.forest7_gui },
@@ -127,9 +127,9 @@ theme.loadEditor = function ()
         TablineSel = { fg = forest.forest8_gui, bg = forest.forest3_gui },
         Tabline = { fg = forest.forest4_gui },
         Title = { fg = forest.forest14_gui, bg = forest.none, style = 'bold' },
-        Visual = { fg = forest.none, bg = forest.forest1_gui },
+        Visual = { fg = forest.none, bg = forest.darkgray },
         VisualNOS = { fg = forest.none, bg = forest.forest1_gui },
-        WarningMsg = { fg = forest.forest15_gui },
+        WarningMsg = { fg = forest.brightyellow },
         WildMenu = { fg = forest.forest12_gui, bg = forest.none, style = 'bold' },
         CursorColumn = { fg = forest.none, bg = forest.cursorlinefg },
         CursorLine = { fg = forest.none, bg = forest.cursorlinefg },
@@ -140,11 +140,11 @@ theme.loadEditor = function ()
         ReplacelMode = { fg = forest.forest11_gui, bg = forest.none, style = 'reverse' },
         VisualMode = { fg = forest.forest9_gui, bg = forest.none, style = 'reverse' },
         CommandMode = { fg = forest.forest4_gui, bg = forest.none, style = 'reverse' },
-        Warnings = { fg = forest.forest15_gui },
+        Warnings = { fg = forest.brightyellow },
 
-        healthError = { fg = forest.forest11_gui },
-        healthSuccess = { fg = forest.forest14_gui },
-        healthWarning = { fg = forest.forest15_gui },
+        healthError = { fg = forest.red },
+        healthSuccess = { fg = forest.cyan },
+        healthWarning = { fg = forest.brightyellow },
 
         -- dashboard
         DashboardShortCut = { fg = forest.forest7_gui },
@@ -153,8 +153,8 @@ theme.loadEditor = function ()
         DashboardFooter = { fg = forest.forest14_gui, style = "italic" },
 
         -- BufferLine
-        BufferLineIndicatorSelected = { fg = forest.forest0_gui },
-        BufferLineFill = { bg = forest.forest0_gui },
+        BufferLineIndicatorSelected = { fg = forest.darkbrown },
+        BufferLineFill = { bg = forest.darkbrown },
 
     }
 
@@ -162,18 +162,18 @@ theme.loadEditor = function ()
 
     --Set transparent background
     if vim.g.forest_disable_background then
-        editor.Normal =     { fg = forest.forest4_gui, bg = forest.none } -- normal text and background color
-        editor.SignColumn = { fg = forest.forest4_gui, bg = forest.none }
+        editor.Normal =     { fg = forest.white, bg = forest.none } -- normal text and background color
+        editor.SignColumn = { fg = forest.white, bg = forest.none }
     else
-        editor.Normal =     { fg = forest.forest4_gui, bg = forest.forest0_gui } -- normal text and background color
-        editor.SignColumn = { fg = forest.forest4_gui, bg = forest.forest0_gui }
+        editor.Normal =     { fg = forest.white, bg = forest.darkbrown } -- normal text and background color
+        editor.SignColumn = { fg = forest.white, bg = forest.darkbrowm }
     end
 
     -- Remove window split borders
     if vim.g.forest_borders then
         editor.VertSplit = { fg = forest.forest2_gui }
     else
-        editor.VertSplit = { fg = forest.forest0_gui }
+        editor.VertSplit = { fg = forest.darkbrown }
     end
 
     return editor
@@ -182,7 +182,7 @@ end
 theme.loadTerminal = function ()
 
     vim.g.terminal_color_0 = forest.forest1_gui
-    vim.g.terminal_color_1 = forest.forest11_gui
+    vim.g.terminal_color_1 = forest.red
     vim.g.terminal_color_2 = forest.forest14_gui
     vim.g.terminal_color_3 = forest.forest13_gui
     vim.g.terminal_color_4 = forest.forest9_gui
@@ -211,38 +211,38 @@ theme.loadTreeSitter = function ()
          -- For constructor calls and definitions: `= { }` in Lua, and Java constructors.
         TSConstructor = { fg = forest.forest9_gui },
         TSConstant = { fg = forest.forest13_gui }, -- For constants
-        TSFloat = { fg = forest.forest15_gui }, -- For floats
-        TSNumber = { fg = forest.forest15_gui }, -- For all number
-        TSString = { fg = forest.forest14_gui }, -- For strings.
+        TSFloat = { fg = forest.pink }, -- For floats
+        TSNumber = { fg = forest.pink }, -- For all number
+        TSString = { fg = forest.brown }, -- For strings.
         TSAttribute = { fg = forest.forest15_gui }, -- (unstable) TODO: docs
-        TSBoolean = { fg = forest.forest9_gui }, -- For booleans.
-        TSConstBuiltin = { fg = forest.forest7_gui }, -- For constant that are built in the language: `nil` in Lua.
-        TSConstMacro = { fg = forest.forest7_gui }, -- For constants that are defined by macros: `NULL` in C.
-        TSError = { fg = forest.forest11_gui }, -- For syntax/parser errors.
+        TSBoolean = { fg = forest.blue }, -- For booleans.
+        TSConstBuiltin = { fg = forest.blue }, -- For constant that are built in the language: `nil` in Lua.
+        TSConstMacro = { fg = forest.blue }, -- For constants that are defined by macros: `NULL` in C.
+        TSError = { fg = forest.red }, -- For syntax/parser errors.
         TSException = { fg = forest.forest15_gui }, -- For exception related keywords.
         TSField = { fg = forest.forest4_gui }, -- For fields.
         -- For macro defined fuctions (calls and definitions): each `macro_rules` in Rust.
-        TSFuncMacro = { fg = forest.forest7_gui },
+        TSFuncMacro = { fg = forest.blue },
         -- For includes: `#include` in C, `use` or `extern crate` in Rust, or `require` in Lua.
-        TSInclude = { fg = forest.forest9_gui }, 
+        TSInclude = { fg = forest.blue }, 
         TSLabel = { fg = forest.forest15_gui }, -- For labels: `label:` in C and `:label:` in Lua.
         TSNamespace = { fg = forest.forest4_gui}, -- For identifiers referring to modules and namespaces.
-        TSOperator = { fg = forest.forest9_gui }, -- For any operator: `+`, but also `->` and `*` in C.
+        TSOperator = { fg = forest.white }, -- For any operator: `+`, but also `->` and `*` in C.
         TSParameter = { fg = forest.forest10_gui }, -- For parameters of a function.
         TSParameterReference = { fg = forest.forest10_gui }, -- For references to parameters of a function.
         TSProperty = { fg = forest.forest10_gui }, -- Same as `TSField`.
-        TSPunctDelimiter = { fg = forest.forest8_gui }, -- For delimiters ie: `.`
-        TSPunctBracket = { fg = forest.forest8_gui }, -- For brackets and parens.
+        TSPunctDelimiter = { fg = forest.white }, -- For delimiters ie: `.`
+        TSPunctBracket = { fg = forest.white }, -- For brackets and parens.
         -- For special punctutation that does not fall in the catagories before.
         TSPunctSpecial = { fg = forest.forest8_gui }, 
         TSStringRegex = { fg = forest.forest7_gui }, -- For regexes.
         TSStringEscape = { fg = forest.forest15_gui }, -- For escape characters within a string.
         TSSymbol = { fg = forest.forest15_gui }, -- For identifiers referring to symbols or atoms.
-        TSType = { fg = forest.forest9_gui}, -- For types.
-        TSTypeBuiltin = { fg = forest.forest9_gui}, -- For builtin types.
-        TSTag = { fg = forest.forest4_gui }, -- Tags like html tag names.
-        TSTagDelimiter = { fg = forest.forest15_gui }, -- Tag delimiter like `<` `>` `/`
-        TSText = { fg = forest.forest4_gui }, -- For strings consideforest11_gui text in a markup language.
+        TSType = { fg = forest.blue }, -- For types.
+        TSTypeBuiltin = { fg = forest.blue }, -- For builtin types.
+        TSTag = { fg = forest.purble }, -- Tags like html tag names.
+        TSTagDelimiter = { fg = forest.purple }, -- Tag delimiter like `<` `>` `/`
+        TSText = { fg = forest.white }, -- For strings consideforest11_gui text in a markup language.
         TSTextReference = { fg = forest.forest15_gui }, -- FIXME
         TSEmphasis = { fg = forest.forest10_gui }, -- For text to be represented with emphasis.
         TSUnderline = { fg = forest.forest4_gui, bg = forest.none, style = 'underline' }, -- For text to be represented with an underline.
@@ -253,13 +253,13 @@ theme.loadTreeSitter = function ()
     }
 
     treesitter.TSComment = { fg = forest.forest3_gui_bright }
-    treesitter.TSConditional = { fg = forest.forest9_gui } -- For keywords related to conditionnals.
-    treesitter.TSKeyword = { fg = forest.forest9_gui } -- For keywords that don't fall in previous categories.
-    treesitter.TSRepeat = { fg = forest.forest9_gui } -- For keywords related to loops.
-    treesitter.TSKeywordFunction = { fg = forest.forest8_gui }
-    treesitter.TSFunction = { fg = forest.forest8_gui } -- For fuction (calls and definitions).
-    treesitter.TSMethod = { fg = forest.forest7_gui } -- For method calls and definitions.
-    treesitter.TSFuncBuiltin = { fg = forest.forest8_gui }
+    treesitter.TSConditional = { fg = forest.blue } -- For keywords related to conditionnals.
+    treesitter.TSKeyword = { fg = forest.blue } -- For keywords that don't fall in previous categories.
+    treesitter.TSRepeat = { fg = forest.blue } -- For keywords related to loops.
+    treesitter.TSKeywordFunction = { fg = forest.green }
+    treesitter.TSFunction = { fg = forest.green } -- For fuction (calls and definitions).
+    treesitter.TSMethod = { fg = forest.green } -- For method calls and definitions.
+    treesitter.TSFuncBuiltin = { fg = forest.green }
     treesitter.TSVariable = { fg = forest.forest4_gui } -- Any variable name that does not have another highlight.
     treesitter.TSVariableBuiltin = { fg = forest.forest4_gui }
 
@@ -271,20 +271,20 @@ theme.loadLSP = function ()
 -- Lsp highlight groups
 
     local lsp = {
-        LspDiagnosticsDefaultError = { fg = forest.forest11_gui }, -- used for "Error" diagnostic virtual text
-        LspDiagnosticsSignError = { fg = forest.forest11_gui }, -- used for "Error" diagnostic signs in sign column
+        LspDiagnosticsDefaultError = { fg = forest.red }, -- used for "Error" diagnostic virtual text
+        LspDiagnosticsSignError = { fg = forest.red }, -- used for "Error" diagnostic signs in sign column
         -- used for "Error" diagnostic messages in the diagnostics float
-        LspDiagnosticsFloatingError = { fg = forest.forest11_gui }, 
-        LspDiagnosticsVirtualTextError = { fg = forest.forest11_gui }, -- Virtual text "Error"
+        LspDiagnosticsFloatingError = { fg = forest.red }, 
+        LspDiagnosticsVirtualTextError = { fg = forest.red }, -- Virtual text "Error"
         -- used to underline "Error" diagnostics
-        LspDiagnosticsUnderlineError = { style = 'undercurl', sp = forest.forest11_gui }, 
-        LspDiagnosticsDefaultWarning = { fg = forest.forest15_gui}, -- used for "Warning" diagnostic signs in sign column
-        LspDiagnosticsSignWarning = { fg = forest.forest15_gui}, -- used for "Warning" diagnostic signs in sign column
+        LspDiagnosticsUnderlineError = { style = 'undercurl', sp = forest.red }, 
+        LspDiagnosticsDefaultWarning = { fg = forest.brightyellow }, -- used for "Warning" diagnostic signs in sign column
+        LspDiagnosticsSignWarning = { fg = forest.brightyellow }, -- used for "Warning" diagnostic signs in sign column
         -- used for "Warning" diagnostic messages in the diagnostics float
-        LspDiagnosticsFloatingWarning = { fg = forest.forest15_gui}, 
-        LspDiagnosticsVirtualTextWarning = { fg = forest.forest15_gui}, -- Virtual text "Warning"
+        LspDiagnosticsFloatingWarning = { fg = forest.brightyellow }, 
+        LspDiagnosticsVirtualTextWarning = { fg = forest.brightyellow }, -- Virtual text "Warning"
         -- used to underline "Warning" diagnostics.
-        LspDiagnosticsUnderlineWarning = { style = 'undercurl', sp = forest.forest15_gui }, 
+        LspDiagnosticsUnderlineWarning = { style = 'undercurl', sp = forest.brightyellow }, 
         LspDiagnosticsDefaultInformation = { fg = forest.forest10_gui }, -- used for "Information" diagnostic virtual text
         -- used for "Information" diagnostic signs in sign column
         LspDiagnosticsSignInformation = { fg = forest.forest10_gui },
@@ -299,10 +299,10 @@ theme.loadLSP = function ()
         LspDiagnosticsFloatingHint = { fg = forest.forest9_gui  }, 
         LspDiagnosticsVirtualTextHint = { fg = forest.forest9_gui  }, -- Virtual text "Hint"
         -- used to underline "Hint" diagnostics.
-        LspDiagnosticsUnderlineHint = { style = 'undercurl', sp = forest.forest10_gui }, 
-        LspReferenceText = { fg = forest.forest4_gui, bg = forest.forest1_gui }, -- used for highlighting "text" references
-        LspReferenceRead = { fg = forest.forest4_gui, bg = forest.forest1_gui }, -- used for highlighting "read" references
-        LspReferenceWrite = { fg = forest.forest4_gui, bg = forest.forest1_gui }, -- used for highlighting "write" references
+        LspDiagnosticsUnderlineHint = { style = 'undercurl', sp = forest.brown }, 
+        LspReferenceText = { fg = forest.white, bg = forest.darkgray }, -- used for highlighting "text" references
+        LspReferenceRead = { fg = forest.white, bg = forest.darkgray }, -- used for highlighting "read" references
+        LspReferenceWrite = { fg = forest.white, bg = forest.darkgray }, -- used for highlighting "write" references
 
         DiagnosticVirtualTextWarn = { link = "LspDiagnosticsVirtualTextWarning" },
         DiagnosticUnderlineWarn = { link = "LspDiagnosticsUnderlineWarning" },
@@ -332,14 +332,14 @@ theme.loadPlugins = function()
         -- LspTrouble
         LspTroubleText = { fg = forest.forest4_gui },
         LspTroubleCount = { fg = forest.forest9_gui, bg = forest.forest10_gui },
-        LspTroubleNormal = { fg = forest.forest4_gui, bg = forest.sidebar },
+        LspTroubleNormal = { fg = forest.white, bg = forest.sidebar },
 
         -- Diff
-        diffAdded = { fg = forest.forest14_gui },
-        diffRemoved = { fg = forest.forest11_gui },
-        diffChanged = { fg = forest.forest15_gui },
+        diffAdded = { fg = forest.cyan },
+        diffRemoved = { fg = forest.red },
+        diffChanged = { fg = forest.brightyellow },
         diffOldFile = { fg = forest.yelow },
-        diffNewFile = { fg = forest.forest12_gui },
+        diffNewFile = { fg = forest.cyan },
         diffFile = { fg = forest.forest7_gui },
         diffLine = { fg = forest.forest3_gui },
         diffIndexLine = { fg = forest.forest9_gui },
@@ -354,27 +354,27 @@ theme.loadPlugins = function()
         NeogitDiffAddHighlight = { fg = forest.forest14_gui, style='reverse' },
 
         -- GitGutter
-        GitGutterAdd = { fg = forest.forest14_gui }, -- diff mode: Added line |diff.txt|
-        GitGutterChange = { fg = forest.forest15_gui }, -- diff mode: Changed line |diff.txt|
-        GitGutterDelete = { fg = forest.forest11_gui }, -- diff mode: Deleted line |diff.txt|
+        GitGutterAdd = { fg = forest.cyan }, -- diff mode: Added line |diff.txt|
+        GitGutterChange = { fg = forest.brightyellow }, -- diff mode: Changed line |diff.txt|
+        GitGutterDelete = { fg = forest.red }, -- diff mode: Deleted line |diff.txt|
 
         -- GitSigns
-        GitSignsAdd = { fg = forest.forest14_gui }, -- diff mode: Added line |diff.txt|
-        GitSignsAddNr = { fg = forest.forest14_gui }, -- diff mode: Added line |diff.txt|
-        GitSignsAddLn = { fg = forest.forest14_gui }, -- diff mode: Added line |diff.txt|
-        GitSignsChange = { fg = forest.forest15_gui }, -- diff mode: Changed line |diff.txt|
-        GitSignsChangeNr = { fg = forest.forest15_gui }, -- diff mode: Changed line |diff.txt|
-        GitSignsChangeLn = { fg = forest.forest15_gui }, -- diff mode: Changed line |diff.txt|
-        GitSignsDelete = { fg = forest.forest11_gui }, -- diff mode: Deleted line |diff.txt|
-        GitSignsDeleteNr = { fg = forest.forest11_gui }, -- diff mode: Deleted line |diff.txt|
-        GitSignsDeleteLn = { fg = forest.forest11_gui }, -- diff mode: Deleted line |diff.txt|
+        GitSignsAdd = { fg = forest.cyan }, -- diff mode: Added line |diff.txt|
+        GitSignsAddNr = { fg = forest.cyan }, -- diff mode: Added line |diff.txt|
+        GitSignsAddLn = { fg = forest.cyan }, -- diff mode: Added line |diff.txt|
+        GitSignsChange = { fg = forest.brightyellow }, -- diff mode: Changed line |diff.txt|
+        GitSignsChangeNr = { fg = forest.brightyellow }, -- diff mode: Changed line |diff.txt|
+        GitSignsChangeLn = { fg = forest.brightyellow }, -- diff mode: Changed line |diff.txt|
+        GitSignsDelete = { fg = forest.red }, -- diff mode: Deleted line |diff.txt|
+        GitSignsDeleteNr = { fg = forest.red }, -- diff mode: Deleted line |diff.txt|
+        GitSignsDeleteLn = { fg = forest.red }, -- diff mode: Deleted line |diff.txt|
 
         -- Telescope
         TelescopePromptBorder = { fg = forest.forest8_gui },
-        TelescopeResultsBorder = { fg = forest.forest9_gui },
+        TelescopeResultsBorder = { fg = forest.blue },
         TelescopePreviewBorder = { fg = forest.forest14_gui },
         TelescopeSelectionCaret = { fg = forest.forest9_gui },
-        TelescopeSelection = { fg = forest.forest9_gui },
+        TelescopeSelection = { fg = forest.blue },
         TelescopeMatching = { fg = forest.forest8_gui },
 
         -- NvimTree
@@ -402,7 +402,7 @@ theme.loadPlugins = function()
         WhichKeyFloat = { bg = forest.float },
 
         -- LspSaga
-        DiagnosticError = { fg = forest.forest11_gui },
+        DiagnosticError = { fg = forest.red },
         DiagnosticWarning = { fg = forest.forest15_gui },
         DiagnosticInformation = { fg = forest.forest10_gui },
         DiagnosticHint = { fg = forest.forest9_gui },
@@ -436,7 +436,7 @@ theme.loadPlugins = function()
         CmpItemMenu = { fg = forest.forest14_gui },
                     
         -- Indent Blankline
-        IndentBlanklineChar = { fg = forest.forest3_gui },
+        IndentBlanklineChar = { fg = forest.purple },
         IndentBlanklineContextChar = { fg = forest.forest10_gui },
 
         -- Illuminate
