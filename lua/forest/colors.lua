@@ -12,11 +12,11 @@ local forest = { --chnage everything here and in theme config file
     forest7_gui = "#39cc8f", -- functions
     forest8_gui = "#39cc8f", -- methods
     forest9_gui = "#6c95eb", -- keywords
-    forest10_gui = "#5E81AC", -- not in use 
+    forest10_gui = "#85c46c", -- comments?
     forest11_gui = "#ff5647", -- error
     forest12_gui = "#D08770", -- not in use
     forest13_gui = "#EBCB8B", -- terminal color?
-    forest14_gui = "#c9a26d", -- "#A3BE8C", -- terminal color?
+    forest14_gui = "#c9a26d", -- strings
     forest15_gui = "#ed94c0", -- numbers
     none =          'NONE'
 }
