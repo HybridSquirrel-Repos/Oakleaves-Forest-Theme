@@ -1,9 +1,10 @@
-local forest = {
+local forest = { --chnage everything here and in theme config file 
+
     --16 colors
     forest0_gui = "#262626", --background
     forest1_gui = "#3B4252", -- 
     forest2_gui = "#434C5E", -- 
-    forest3_gui = "#85c46c", -- comments
+    forest3_gui = "#85c46c", -- comments -- not comments its , and . 
     forest3_gui_bright = "#616E88", --
     forest4_gui = "#D8DEE9", --
     forest5_gui = "#E5E9F0", -- text
@@ -15,7 +16,7 @@ local forest = {
     forest11_gui = "#ff5647", -- error
     forest12_gui = "#D08770", -- not in use
     forest13_gui = "#EBCB8B", -- terminal color?
-    forest14_gui = "#A3BE8C", -- terminal color?
+    forest14_gui = "#c9a26d", -- "#A3BE8C", -- terminal color?
     forest15_gui = "#ed94c0", -- numbers
     none =          'NONE'
 }
