@@ -260,8 +260,8 @@ theme.loadTreeSitter = function ()
     treesitter.TSFunction = { fg = forest.cyan } -- For fuction (calls and definitions).
     treesitter.TSMethod = { fg = forest.cyan } -- For method calls and definitions.
     treesitter.TSFuncBuiltin = { fg = forest.cyan }
-    treesitter.TSVariable = { fg = forest.lightblue } -- Any variable name that does not have another highlight.
-    treesitter.TSVariableBuiltin = { fg = forest.forest4_gui }
+    treesitter.TSVariable = { fg = forest.white } -- Any variable name that does not have another highlight.
+    treesitter.TSVariableBuiltin = { fg = forest.lightblue }
 
     return treesitter
 
