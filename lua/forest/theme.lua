@@ -210,7 +210,7 @@ theme.loadTreeSitter = function ()
 
          -- For constructor calls and definitions: `= { }` in Lua, and Java constructors.
         TSConstructor = { fg = forest.purple },
-        TSConstant = { fg = forest.forest13_gui }, -- For constants
+        TSConstant = { fg = forest.blue }, -- For constants
         TSFloat = { fg = forest.pink }, -- For floats
         TSNumber = { fg = forest.pink }, -- For all number
         TSString = { fg = forest.brown }, -- For strings.
