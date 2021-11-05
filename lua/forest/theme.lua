@@ -60,7 +60,7 @@ theme.loadSyntax = function ()
         syntax.Repeat =	{ fg = forest.blue, bg = forest.none, style = 'italic' } -- italic any other keyword
         syntax.Comment = { fg = forest.green, bg = forest.none, style = 'italic' } -- italic comments
         syntax.Function = { fg = forest.cyan, bg = forest.none, style = 'italic' } -- italic funtion names
-        syntax.Identifier = { fg = forest.blue, bg = forest.none, style = 'italic' }; -- any variable name
+        syntax.Identifier = { fg = forest.lightblue, bg = forest.none, style = 'italic' }; -- any variable name
         syntax.String = { fg = forest.brown, bg = forest.none, style= 'italic' } -- any string
     else
         syntax.Comment = {fg = forest.green} -- normal comments
@@ -68,7 +68,7 @@ theme.loadSyntax = function ()
         syntax.Keyword = { fg = forest.blue } -- normal for, do, while, etc.
         syntax.Repeat =	{ fg = forest.blue } -- normal any other keyword
         syntax.Function = { fg = forest.cyan } -- normal function names
-        syntax.Identifier = { fg = forest.blue }; -- any variable name
+        syntax.Identifier = { fg = forest.lightblue }; -- any variable name
         syntax.String = { fg = forest.brown } -- any string
     end
 
@@ -226,7 +226,7 @@ theme.loadTreeSitter = function ()
         -- For includes: `#include` in C, `use` or `extern crate` in Rust, or `require` in Lua.
         TSInclude = { fg = forest.blue }, 
         TSLabel = { fg = forest.forest15_gui }, -- For labels: `label:` in C and `:label:` in Lua.
-        TSNamespace = { fg = forest.forest4_gui}, -- For identifiers referring to modules and namespaces.
+        TSNamespace = { fg = forest.blue }, -- For identifiers referring to modules and namespaces.
         TSOperator = { fg = forest.white }, -- For any operator: `+`, but also `->` and `*` in C.
         TSParameter = { fg = forest.forest10_gui }, -- For parameters of a function.
         TSParameterReference = { fg = forest.forest10_gui }, -- For references to parameters of a function.
@@ -252,7 +252,7 @@ theme.loadTreeSitter = function ()
 
     }
 
-    treesitter.TSComment = { fg = forest.forest3_gui_bright }
+    treesitter.TSComment = { fg = forest.green }
     treesitter.TSConditional = { fg = forest.blue } -- For keywords related to conditionnals.
     treesitter.TSKeyword = { fg = forest.blue } -- For keywords that don't fall in previous categories.
     treesitter.TSRepeat = { fg = forest.blue } -- For keywords related to loops.
@@ -260,7 +260,7 @@ theme.loadTreeSitter = function ()
     treesitter.TSFunction = { fg = forest.cyan } -- For fuction (calls and definitions).
     treesitter.TSMethod = { fg = forest.cyan } -- For method calls and definitions.
     treesitter.TSFuncBuiltin = { fg = forest.cyan }
-    treesitter.TSVariable = { fg = forest.forest4_gui } -- Any variable name that does not have another highlight.
+    treesitter.TSVariable = { fg = forest.lightblue } -- Any variable name that does not have another highlight.
     treesitter.TSVariableBuiltin = { fg = forest.forest4_gui }
 
     return treesitter
