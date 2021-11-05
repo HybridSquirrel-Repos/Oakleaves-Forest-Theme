@@ -209,7 +209,7 @@ theme.loadTreeSitter = function ()
         TSCharacter= { fg = forest.forest14_gui },    -- For characters.
 
          -- For constructor calls and definitions: `= { }` in Lua, and Java constructors.
-        TSConstructor = { fg = forest.forest9_gui },
+        TSConstructor = { fg = forest.purple },
         TSConstant = { fg = forest.forest13_gui }, -- For constants
         TSFloat = { fg = forest.pink }, -- For floats
         TSNumber = { fg = forest.pink }, -- For all number
