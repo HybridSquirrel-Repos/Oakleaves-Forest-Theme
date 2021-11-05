@@ -238,7 +238,7 @@ theme.loadTreeSitter = function ()
         TSStringRegex = { fg = forest.forest7_gui }, -- For regexes.
         TSStringEscape = { fg = forest.forest15_gui }, -- For escape characters within a string.
         TSSymbol = { fg = forest.forest15_gui }, -- For identifiers referring to symbols or atoms.
-        TSType = { fg = forest.blue }, -- For types.
+        TSType = { fg = forest.purple }, -- For types.
         TSTypeBuiltin = { fg = forest.blue }, -- For builtin types.
         TSTag = { fg = forest.purble }, -- Tags like html tag names.
         TSTagDelimiter = { fg = forest.purple }, -- Tag delimiter like `<` `>` `/`
