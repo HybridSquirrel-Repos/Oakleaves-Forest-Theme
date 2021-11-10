@@ -378,10 +378,10 @@ theme.loadPlugins = function()
 
                    
         -- Cmp
-        CmpItemKind = { fg = forest.forest15_gui },
-        CmpItemAbbrMatch = { fg = forest.forest5_gui, style = 'bold' },
-        CmpItemAbbrMatchFuzzy = { fg = forest.forest5_gui, style = 'bold' },
-        CmpItemAbbr = { fg = forest.forest4_gui},
+        CmpItemKind = { fg = forest.brown },
+        CmpItemAbbrMatch = { fg = forest.brown, style = 'bold' },
+        CmpItemAbbrMatchFuzzy = { fg = forest.brown, style = 'bold' },
+        CmpItemAbbr = { fg = forest.brown },
         CmpItemMenu = { fg = forest.brown },
                     
         -- Indent Blankline
