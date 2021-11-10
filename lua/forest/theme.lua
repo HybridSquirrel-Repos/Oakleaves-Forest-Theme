@@ -361,12 +361,12 @@ theme.loadPlugins = function()
         NvimTreeSpecialFile = { fg = forest.forest9_gui , style = "underline" },
         NvimTreeFolderName = { fg = forest.forest10_gui },
         NvimTreeEmptyFolderName = { fg = forest.forest1_gui },
-        NvimTreeFolderIcon = { fg = forest.forest4_gui },
+        NvimTreeFolderIcon = { fg = forest.yellow },
         NvimTreeIndentMarker = { fg  = forest.forest1_gui },
-        LspDiagnosticsError = { fg = forest.forest11_gui },
-        LspDiagnosticsWarning = { fg = forest.forest15_gui },
-        LspDiagnosticsInformation = { fg = forest.forest10_gui },
-        LspDiagnosticsHint = { fg = forest.forest9_gui },
+        LspDiagnosticsError = { fg = forest.red },
+        LspDiagnosticsWarning = { fg = forest.brightyellow },
+        LspDiagnosticsInformation = { fg = forest.white },
+        LspDiagnosticsHint = { fg = forest.brightyellow },
 
         -- WhichKey
         WhichKey = { fg = forest.forest4_gui , style = 'bold'},
