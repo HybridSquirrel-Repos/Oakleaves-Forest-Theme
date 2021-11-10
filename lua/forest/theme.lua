@@ -345,10 +345,10 @@ theme.loadPlugins = function()
         diffIndexLine = { fg = forest.forest9_gui },
 
                 -- Telescope
-        TelescopePromptBorder = { fg = forest.forest8_gui },
+        TelescopePromptBorder = { fg = forest.yellow },
         TelescopeResultsBorder = { fg = forest.blue },
-        TelescopePreviewBorder = { fg = forest.forest14_gui },
-        TelescopeSelectionCaret = { fg = forest.forest9_gui },
+        TelescopePreviewBorder = { fg = forest.blue },
+        TelescopeSelectionCaret = { fg = forest.brightmagenta },
         TelescopeSelection = { fg = forest.blue },
         TelescopeMatching = { fg = forest.yellow },
 
