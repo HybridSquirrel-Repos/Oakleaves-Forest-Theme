@@ -344,32 +344,7 @@ theme.loadPlugins = function()
         diffLine = { fg = forest.forest3_gui },
         diffIndexLine = { fg = forest.forest9_gui },
 
-        -- Neogit
-        NeogitBranch = { fg = forest.forest10_gui },
-        NeogitRemote = { fg = forest.forest9_gui },
-        NeogitHunkHeader = { fg = forest.forest8_gui },
-        NeogitHunkHeaderHighlight = { fg = forest.forest8_gui, bg = forest.forest1_gui },
-        NeogitDiffContextHighlight = { bg = forest.forest1_gui },
-        NeogitDiffDeleteHighlight = { fg = forest.forest11_gui, style='reverse' },
-        NeogitDiffAddHighlight = { fg = forest.forest14_gui, style='reverse' },
-
-        -- GitGutter
-        GitGutterAdd = { fg = forest.cyan }, -- diff mode: Added line |diff.txt|
-        GitGutterChange = { fg = forest.brightyellow }, -- diff mode: Changed line |diff.txt|
-        GitGutterDelete = { fg = forest.red }, -- diff mode: Deleted line |diff.txt|
-
-        -- GitSigns
-        GitSignsAdd = { fg = forest.cyan }, -- diff mode: Added line |diff.txt|
-        GitSignsAddNr = { fg = forest.cyan }, -- diff mode: Added line |diff.txt|
-        GitSignsAddLn = { fg = forest.cyan }, -- diff mode: Added line |diff.txt|
-        GitSignsChange = { fg = forest.brightyellow }, -- diff mode: Changed line |diff.txt|
-        GitSignsChangeNr = { fg = forest.brightyellow }, -- diff mode: Changed line |diff.txt|
-        GitSignsChangeLn = { fg = forest.brightyellow }, -- diff mode: Changed line |diff.txt|
-        GitSignsDelete = { fg = forest.red }, -- diff mode: Deleted line |diff.txt|
-        GitSignsDeleteNr = { fg = forest.red }, -- diff mode: Deleted line |diff.txt|
-        GitSignsDeleteLn = { fg = forest.red }, -- diff mode: Deleted line |diff.txt|
-
-        -- Telescope
+                -- Telescope
         TelescopePromptBorder = { fg = forest.forest8_gui },
         TelescopeResultsBorder = { fg = forest.blue },
         TelescopePreviewBorder = { fg = forest.forest14_gui },
@@ -401,99 +376,35 @@ theme.loadPlugins = function()
         WhichKeyFloating = { bg = forest.float },
         WhichKeyFloat = { bg = forest.float },
 
-        -- LspSaga
-        DiagnosticError = { fg = forest.red },
-        DiagnosticWarning = { fg = forest.forest15_gui },
-        DiagnosticInformation = { fg = forest.forest10_gui },
-        DiagnosticHint = { fg = forest.forest9_gui },
-        DiagnosticTruncateLine = { fg = forest.forest4_gui },
-        LspFloatWinNormal = { bg = forest.forest2_gui },
-        LspFloatWinBorder = { fg = forest.forest9_gui },
-        LspSagaBorderTitle = { fg = forest.forest8_gui },
-        LspSagaHoverBorder = { fg = forest.forest10_gui },
-        LspSagaRenameBorder = { fg = forest.forest14_gui },
-        LspSagaDefPreviewBorder = { fg = forest.forest14_gui },
-        LspSagaCodeActionBorder = { fg = forest.forest7_gui },
-        LspSagaFinderSelection = { fg = forest.forest14_gui },
-        LspSagaCodeActionTitle = { fg = forest.forest10_gui },
-        LspSagaCodeActionContent = { fg = forest.forest9_gui },
-        LspSagaSignatureHelpBorder = { fg = forest.forest13_gui },
-        ReferencesCount = { fg = forest.forest9_gui },
-        DefinitionCount = { fg = forest.forest9_gui },
-        DefinitionIcon = { fg = forest.forest7_gui },
-        ReferencesIcon = { fg = forest.forest7_gui },
-        TargetWord = { fg = forest.forest8_gui },
-
-            -- Sneak
-        Sneak = { fg = forest.forest0_gui, bg = forest.forest4_gui },
-        SneakScope = { bg = forest.forest1_gui },
-                    
+                   
         -- Cmp
         CmpItemKind = { fg = forest.forest15_gui },
         CmpItemAbbrMatch = { fg = forest.forest5_gui, style = 'bold' },
         CmpItemAbbrMatchFuzzy = { fg = forest.forest5_gui, style = 'bold' },
         CmpItemAbbr = { fg = forest.forest4_gui},
-        CmpItemMenu = { fg = forest.forest14_gui },
+        CmpItemMenu = { fg = forest.brown },
                     
         -- Indent Blankline
-        IndentBlanklineChar = { fg = forest.purple },
-        IndentBlanklineContextChar = { fg = forest.forest10_gui },
+        IndentBlanklineChar = { fg = forest.darkgray },
+        IndentBlanklineContextChar = { fg = forest.purple },
 
         -- Illuminate
-        illuminatedWord = { bg = forest.forest3_gui },
-        illuminatedCurWord = { bg = forest.forest3_gui },
-
-        -- nvim-dap
-        DapBreakpoint = { fg = forest.forest14_gui},
-        DapStopped = { fg = forest.forest15_gui},
-
-        -- Hop
-        HopNextKey = { fg = forest.forest4_gui, style = 'bold' },
-        HopNextKey1 = { fg = forest.forest8_gui, style = 'bold' },
-        HopNextKey2 = { fg = forest.forest4_gui},
-        HopUnmatched = { fg = forest.forest3_gui },
-
-        -- Fern
-        FernBranchText = { fg = forest.forest3_gui_bright},
-
-        -- nvim-ts-rainbow
-        rainbowcol1 = { fg = forest.forest15_gui },
-        rainbowcol2 = { fg = forest.forest13_gui },
-        rainbowcol3 = { fg = forest.forest11_gui },
-        rainbowcol4 = { fg = forest.forest7_gui },
-        rainbowcol5 = { fg = forest.forest8_gui },
-        rainbowcol6 = { fg = forest.forest15_gui },
-        rainbowcol7 = { fg = forest.forest13_gui },
-
-        -- lightspeed
-        LightspeedLabel = { fg = forest.forest8_gui, style = "bold" },
-        LightspeedLabelOverlapped = { fg = forest.forest8_gui, style = "bold,underline" },
-        LightspeedLabelDistant = { fg = forest.forest15_gui, style = "bold" },
-        LightspeedLabelDistantOverlapped = { fg = forest.forest15_gui, style = "bold,underline" },
-        LightspeedShortcut = { fg = forest.forest10_gui, style = "bold" },
-        LightspeedShortcutOverlapped = { fg = forest.forest10_gui, style = "bold,underline" },
-        LightspeedMaskedChar = { fg = forest.forest4_gui, bg = forest.forest2_gui, style = "bold" },
-        LightspeedGreyWash = { fg = forest.forest3_gui_bright },
-        LightspeedUnlabeledMatch = { fg = forest.forest4_gui, bg = forest.forest1_gui },
-        LightspeedOneCharMatch = { fg = forest.forest8_gui, style = "bold,reverse" },
-        LightspeedUniqueChar = { style = "bold,underline" },
-        -- LightspeedPendingOpArea = { style = "strikethrough" },
-        -- LightspeedPendingChangeOpArea = { style = "strikethrough" },
-        -- LightspeedCursor = { fg = forest.forest7_gui, style = "underline,reverse" },
+        illuminatedWord = { bg = forest.gray },
+        illuminatedCurWord = { bg = forest.gray },
     }
     -- Options:
 
     -- Disable nvim-tree background
     if vim.g.forest_disable_background then
-        plugins.NvimTreeNormal = { fg = forest.forest4_gui, bg = forest.none }
+        plugins.NvimTreeNormal = { fg = forest.white, bg = forest.none }
     else
-        plugins.NvimTreeNormal = { fg = forest.forest4_gui, bg = forest.sidebar }
+        plugins.NvimTreeNormal = { fg = forest.white, bg = forest.sidebar }
     end
 
     if vim.g.forest_enable_sidebar_background then
-        plugins.NvimTreeNormal = { fg = forest.forest4_gui, bg = forest.sidebar }
+        plugins.NvimTreeNormal = { fg = forest.white, bg = forest.sidebar }
     else
-        plugins.NvimTreeNormal = { fg = forest.forest4_gui, bg = forest.none }
+        plugins.NvimTreeNormal = { fg = white, bg = forest.none }
     end
 
     return plugins
