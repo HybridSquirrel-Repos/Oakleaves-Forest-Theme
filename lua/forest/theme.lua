@@ -201,18 +201,7 @@ theme.loadTerminal = function ()
 end
 
 theme.loadTreeSitter = function ()
-    -- TreeSitter highlight groups
-    treesitter.TSComment = { fg = forest.green }
-    treesitter.TSConditional = { fg = forest.blue } -- For keywords related to conditionnals.
-    treesitter.TSKeyword = { fg = forest.blue } -- For keywords that don't fall in previous categories.
-    treesitter.TSRepeat = { fg = forest.blue } -- For keywords related to loops.
-    treesitter.TSKeywordFunction = { fg = forest.cyan }
-    treesitter.TSFunction = { fg = forest.cyan } -- For fuction (calls and definitions).
-    treesitter.TSMethod = { fg = forest.cyan } -- For method calls and definitions.
-    treesitter.TSFuncBuiltin = { fg = forest.cyan }
-    treesitter.TSVariable = { fg = forest.white } -- Any variable name that does not have another highlight.
-    treesitter.TSVariableBuiltin = { fg = forest.blue }
-
+    
     local treesitter = {
     -- For C++/Dart attributes, annotations thatcan be attached to the code to denote some kind of meta information.
         TSAnnotation = { fg = forest.white },
@@ -261,6 +250,18 @@ theme.loadTreeSitter = function ()
         --TSURI = { fg = forest.white }, -- Any URI like a link or email.        TSAnnotation =                                                                  { fg = forest.forest11_gui },    -- For C++/Dart attributes, annotations that can be attached to the code to denote some kind of meta information.
 
     }
+
+    -- TreeSitter highlight groups
+    treesitter.TSComment = { fg = forest.green }
+    treesitter.TSConditional = { fg = forest.blue } -- For keywords related to conditionnals.
+    treesitter.TSKeyword = { fg = forest.blue } -- For keywords that don't fall in previous categories.
+    treesitter.TSRepeat = { fg = forest.blue } -- For keywords related to loops.
+    treesitter.TSKeywordFunction = { fg = forest.cyan }
+    treesitter.TSFunction = { fg = forest.cyan } -- For fuction (calls and definitions).
+    treesitter.TSMethod = { fg = forest.cyan } -- For method calls and definitions.
+    treesitter.TSFuncBuiltin = { fg = forest.cyan }
+    treesitter.TSVariable = { fg = forest.lightblue } -- Any variable name that does not have another highlight.
+    treesitter.TSVariableBuiltin = { fg = forest.blue }
 
 
     return treesitter
