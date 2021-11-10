@@ -205,8 +205,8 @@ theme.loadTreeSitter = function ()
 
     local treesitter = {
     -- For C++/Dart attributes, annotations thatcan be attached to the code to denote some kind of meta information.
-        TSAnnotation = { fg = forest.forest12_gui },
-        TSCharacter= { fg = forest.forest14_gui },    -- For characters.
+        TSAnnotation = { fg = forest.white },
+        TSCharacter= { fg = forest.brown },    -- For characters.
 
          -- For constructor calls and definitions: `= { }` in Lua, and Java constructors.
         TSConstructor = { fg = forest.purple },
@@ -214,41 +214,41 @@ theme.loadTreeSitter = function ()
         TSFloat = { fg = forest.pink }, -- For floats
         TSNumber = { fg = forest.pink }, -- For all number
         TSString = { fg = forest.brown }, -- For strings.
-        TSAttribute = { fg = forest.forest15_gui }, -- (unstable) TODO: docs
+        TSAttribute = { fg = forest.purple }, -- (unstable) TODO: docs
         TSBoolean = { fg = forest.blue }, -- For booleans.
         TSConstBuiltin = { fg = forest.blue }, -- For constant that are built in the language: `nil` in Lua.
         TSConstMacro = { fg = forest.blue }, -- For constants that are defined by macros: `NULL` in C.
         TSError = { fg = forest.red }, -- For syntax/parser errors.
-        TSException = { fg = forest.forest15_gui }, -- For exception related keywords.
-        TSField = { fg = forest.forest4_gui }, -- For fields.
+        TSException = { fg = forest.blue }, -- For exception related keywords.
+        TSField = { fg = forest.white }, -- For fields.
         -- For macro defined fuctions (calls and definitions): each `macro_rules` in Rust.
         TSFuncMacro = { fg = forest.blue },
         -- For includes: `#include` in C, `use` or `extern crate` in Rust, or `require` in Lua.
         TSInclude = { fg = forest.blue }, 
-        TSLabel = { fg = forest.forest15_gui }, -- For labels: `label:` in C and `:label:` in Lua.
+        TSLabel = { fg = forest.blue }, -- For labels: `label:` in C and `:label:` in Lua.
         TSNamespace = { fg = forest.blue }, -- For identifiers referring to modules and namespaces.
         TSOperator = { fg = forest.white }, -- For any operator: `+`, but also `->` and `*` in C.
-        TSParameter = { fg = forest.forest10_gui }, -- For parameters of a function.
-        TSParameterReference = { fg = forest.forest10_gui }, -- For references to parameters of a function.
-        TSProperty = { fg = forest.forest10_gui }, -- Same as `TSField`.
+        TSParameter = { fg = forest.white }, -- For parameters of a function.
+        TSParameterReference = { fg = forest.white }, -- For references to parameters of a function.
+        TSProperty = { fg = forest.white }, -- Same as `TSField`.
         TSPunctDelimiter = { fg = forest.white }, -- For delimiters ie: `.`
         TSPunctBracket = { fg = forest.white }, -- For brackets and parens.
         -- For special punctutation that does not fall in the catagories before.
         TSPunctSpecial = { fg = forest.forest8_gui }, 
-        TSStringRegex = { fg = forest.forest7_gui }, -- For regexes.
-        TSStringEscape = { fg = forest.forest15_gui }, -- For escape characters within a string.
+        TSStringRegex = { fg = forest.brown }, -- For regexes.
+        TSStringEscape = { fg = forest.purple }, -- For escape characters within a string.
         TSSymbol = { fg = forest.forest15_gui }, -- For identifiers referring to symbols or atoms.
         TSType = { fg = forest.purple }, -- For types.
         TSTypeBuiltin = { fg = forest.blue }, -- For builtin types.
         TSTag = { fg = forest.purble }, -- Tags like html tag names.
         TSTagDelimiter = { fg = forest.purple }, -- Tag delimiter like `<` `>` `/`
         TSText = { fg = forest.white }, -- For strings consideforest11_gui text in a markup language.
-        TSTextReference = { fg = forest.forest15_gui }, -- FIXME
-        TSEmphasis = { fg = forest.forest10_gui }, -- For text to be represented with emphasis.
-        TSUnderline = { fg = forest.forest4_gui, bg = forest.none, style = 'underline' }, -- For text to be represented with an underline.
-        TSTitle = { fg = forest.forest10_gui, bg = forest.none, style = 'bold' }, -- Text that is part of a title.
-        TSLiteral = { fg = forest.forest4_gui }, -- Literal text.
-        TSURI = { fg = forest.forest14_gui }, -- Any URI like a link or email.        TSAnnotation =                                                                  { fg = forest.forest11_gui },    -- For C++/Dart attributes, annotations that can be attached to the code to denote some kind of meta information.
+        TSTextReference = { fg = forest.white }, -- FIXME
+        TSEmphasis = { fg = forest.white }, -- For text to be represented with emphasis.
+        TSUnderline = { fg = forest.white, bg = forest.none, style = 'underline' }, -- For text to be represented with an underline.
+        TSTitle = { fg = forest.white, bg = forest.none, style = 'bold' }, -- Text that is part of a title.
+        TSLiteral = { fg = forest.white }, -- Literal text.
+        TSURI = { fg = forest.white }, -- Any URI like a link or email.        TSAnnotation =                                                                  { fg = forest.forest11_gui },    -- For C++/Dart attributes, annotations that can be attached to the code to denote some kind of meta information.
 
     }
 
@@ -293,11 +293,11 @@ theme.loadLSP = function ()
         LspDiagnosticsVirtualTextInformation = { fg = forest.white }, -- Virtual text "Information"
         -- used to underline "Information" diagnostics.
         LspDiagnosticsUnderlineInformation = { style = 'undercurl', sp = forest.white }, 
-        LspDiagnosticsDefaultHint = { fg = forest.forest9_gui  },  -- used for "Hint" diagnostic virtual text
-        LspDiagnosticsSignHint = { fg = forest.forest9_gui  }, -- used for "Hint" diagnostic signs in sign column
+        LspDiagnosticsDefaultHint = { fg = forest.brightyellow  },  -- used for "Hint" diagnostic virtual text
+        LspDiagnosticsSignHint = { fg = forest.brightyellow }, -- used for "Hint" diagnostic signs in sign column
         -- used for "Hint" diagnostic messages in the diagnostics float
-        LspDiagnosticsFloatingHint = { fg = forest.forest9_gui  }, 
-        LspDiagnosticsVirtualTextHint = { fg = forest.forest9_gui  }, -- Virtual text "Hint"
+        LspDiagnosticsFloatingHint = { fg = forest.brightyellow  }, 
+        LspDiagnosticsVirtualTextHint = { fg = forest.brightyellow  }, -- Virtual text "Hint"
         -- used to underline "Hint" diagnostics.
         LspDiagnosticsUnderlineHint = { style = 'undercurl', sp = forest.brown }, 
         LspReferenceText = { fg = forest.white, bg = forest.darkgray }, -- used for highlighting "text" references
