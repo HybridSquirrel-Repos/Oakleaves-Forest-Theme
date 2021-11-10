@@ -242,13 +242,13 @@ theme.loadTreeSitter = function ()
         TSTypeBuiltin = { fg = forest.blue }, -- For builtin types.
         TSTag = { fg = forest.purble }, -- Tags like html tag names.
         TSTagDelimiter = { fg = forest.purple }, -- Tag delimiter like `<` `>` `/`
-        TSText = { fg = forest.white }, -- For strings consideforest11_gui text in a markup language.
-        TSTextReference = { fg = forest.white }, -- FIXME
-        TSEmphasis = { fg = forest.white }, -- For text to be represented with emphasis.
-        TSUnderline = { fg = forest.white, bg = forest.none, style = 'underline' }, -- For text to be represented with an underline.
-        TSTitle = { fg = forest.white, bg = forest.none, style = 'bold' }, -- Text that is part of a title.
-        TSLiteral = { fg = forest.white }, -- Literal text.
-        TSURI = { fg = forest.white }, -- Any URI like a link or email.        TSAnnotation =                                                                  { fg = forest.forest11_gui },    -- For C++/Dart attributes, annotations that can be attached to the code to denote some kind of meta information.
+        --TSText = { fg = forest.white }, -- For strings consideforest11_gui text in a markup language.
+        --TSTextReference = { fg = forest.white }, -- FIXME
+        --TSEmphasis = { fg = forest.white }, -- For text to be represented with emphasis.
+        --TSUnderline = { fg = forest.white, bg = forest.none, style = 'underline' }, -- For text to be represented with an underline.
+        --TSTitle = { fg = forest.white, bg = forest.none, style = 'bold' }, -- Text that is part of a title.
+        --TSLiteral = { fg = forest.white }, -- Literal text.
+        --TSURI = { fg = forest.white }, -- Any URI like a link or email.        TSAnnotation =                                                                  { fg = forest.forest11_gui },    -- For C++/Dart attributes, annotations that can be attached to the code to denote some kind of meta information.
 
     }
 
@@ -260,8 +260,8 @@ theme.loadTreeSitter = function ()
     treesitter.TSFunction = { fg = forest.cyan } -- For fuction (calls and definitions).
     treesitter.TSMethod = { fg = forest.cyan } -- For method calls and definitions.
     treesitter.TSFuncBuiltin = { fg = forest.cyan }
-    treesitter.TSVariable = { fg = forest.lightblue } -- Any variable name that does not have another highlight.
-    treesitter.TSVariableBuiltin = { fg = forest.white }
+    --treesitter.TSVariable = { fg = forest.lightblue } -- Any variable name that does not have another highlight.
+    --treesitter.TSVariableBuiltin = { fg = forest.white }
 
     return treesitter
 
