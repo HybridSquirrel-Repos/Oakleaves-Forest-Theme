@@ -285,14 +285,14 @@ theme.loadLSP = function ()
         LspDiagnosticsVirtualTextWarning = { fg = forest.brightyellow }, -- Virtual text "Warning"
         -- used to underline "Warning" diagnostics.
         LspDiagnosticsUnderlineWarning = { style = 'undercurl', sp = forest.brightyellow }, 
-        LspDiagnosticsDefaultInformation = { fg = forest.forest10_gui }, -- used for "Information" diagnostic virtual text
+        LspDiagnosticsDefaultInformation = { fg = forest.white }, -- used for "Information" diagnostic virtual text
         -- used for "Information" diagnostic signs in sign column
-        LspDiagnosticsSignInformation = { fg = forest.forest10_gui },
+        LspDiagnosticsSignInformation = { fg = forest.white },
         -- used for "Information" diagnostic messages in the diagnostics float
-        LspDiagnosticsFloatingInformation = { fg = forest.forest10_gui }, 
-        LspDiagnosticsVirtualTextInformation = { fg = forest.forest10_gui }, -- Virtual text "Information"
+        LspDiagnosticsFloatingInformation = { fg = forest.white }, 
+        LspDiagnosticsVirtualTextInformation = { fg = forest.white }, -- Virtual text "Information"
         -- used to underline "Information" diagnostics.
-        LspDiagnosticsUnderlineInformation = { style = 'undercurl', sp = forest.forest10_gui }, 
+        LspDiagnosticsUnderlineInformation = { style = 'undercurl', sp = forest.white }, 
         LspDiagnosticsDefaultHint = { fg = forest.forest9_gui  },  -- used for "Hint" diagnostic virtual text
         LspDiagnosticsSignHint = { fg = forest.forest9_gui  }, -- used for "Hint" diagnostic signs in sign column
         -- used for "Hint" diagnostic messages in the diagnostics float
@@ -330,25 +330,25 @@ theme.loadPlugins = function()
     local plugins = {
 
         -- LspTrouble
-        LspTroubleText = { fg = forest.forest4_gui },
-        LspTroubleCount = { fg = forest.forest9_gui, bg = forest.forest10_gui },
+        LspTroubleText = { fg = forest.brightyellow },
+        LspTroubleCount = { fg = forest.brightyellow, bg = forest.gray },
         LspTroubleNormal = { fg = forest.white, bg = forest.sidebar },
 
         -- Diff
         diffAdded = { fg = forest.cyan },
         diffRemoved = { fg = forest.red },
         diffChanged = { fg = forest.brightyellow },
-        diffOldFile = { fg = forest.yelow },
+        diffOldFile = { fg = forest.brown },
         diffNewFile = { fg = forest.cyan },
-        diffFile = { fg = forest.forest7_gui },
-        diffLine = { fg = forest.forest3_gui },
-        diffIndexLine = { fg = forest.forest9_gui },
+        diffFile = { fg = forest.brightyellow },
+        diffLine = { fg = forest.brightyellow },
+        diffIndexLine = { fg = forest.white },
 
                 -- Telescope
         TelescopePromptBorder = { fg = forest.yellow },
         TelescopeResultsBorder = { fg = forest.blue },
         TelescopePreviewBorder = { fg = forest.blue },
-        TelescopeSelectionCaret = { fg = forest.brightmagenta },
+        TelescopeSelectionCaret = { fg = forest.blue },
         TelescopeSelection = { fg = forest.blue },
         TelescopeMatching = { fg = forest.yellow },
 
