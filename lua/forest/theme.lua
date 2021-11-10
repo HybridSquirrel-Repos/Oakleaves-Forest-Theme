@@ -205,7 +205,7 @@ theme.loadTreeSitter = function ()
 
     local treesitter = {
     -- For C++/Dart attributes, annotations thatcan be attached to the code to denote some kind of meta information.
-        TSAnnotation = { fg = forest.white },
+        TSAnnotation = { fg = forest.lightblue },
         TSCharacter= { fg = forest.brown },    -- For characters.
 
          -- For constructor calls and definitions: `= { }` in Lua, and Java constructors.
