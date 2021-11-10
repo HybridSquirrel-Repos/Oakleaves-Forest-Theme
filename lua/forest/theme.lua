@@ -378,11 +378,11 @@ theme.loadPlugins = function()
 
                    
         -- Cmp
-        CmpItemKind = { fg = forest.brown },
-        CmpItemAbbrMatch = { fg = forest.brown, style = 'bold' },
-        CmpItemAbbrMatchFuzzy = { fg = forest.brown, style = 'bold' },
-        CmpItemAbbr = { fg = forest.brown },
-        CmpItemMenu = { fg = forest.brown },
+        CmpItemKind = { fg = forest.gray },
+        CmpItemAbbrMatch = { fg = forest.yellow, style = 'bold' },
+        CmpItemAbbrMatchFuzzy = { fg = forest.yellow, style = 'bold' },
+        CmpItemAbbr = { fg = forest.gray },
+        CmpItemMenu = { fg = forest.gray },
                     
         -- Indent Blankline
         IndentBlanklineChar = { fg = forest.darkgray },
