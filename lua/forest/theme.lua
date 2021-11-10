@@ -205,7 +205,7 @@ theme.loadTreeSitter = function ()
 
     local treesitter = {
     -- For C++/Dart attributes, annotations thatcan be attached to the code to denote some kind of meta information.
-        TSAnnotation = { fg = forest.lightblue },
+        TSAnnotation = { fg = forest.white },
         TSCharacter= { fg = forest.brown },    -- For characters.
 
          -- For constructor calls and definitions: `= { }` in Lua, and Java constructors.
@@ -260,7 +260,7 @@ theme.loadTreeSitter = function ()
     treesitter.TSFunction = { fg = forest.cyan } -- For fuction (calls and definitions).
     treesitter.TSMethod = { fg = forest.cyan } -- For method calls and definitions.
     treesitter.TSFuncBuiltin = { fg = forest.cyan }
-    treesitter.TSVariable = { fg = forest.white } -- Any variable name that does not have another highlight.
+    treesitter.TSVariable = { fg = forest.lightblue } -- Any variable name that does not have another highlight.
     treesitter.TSVariableBuiltin = { fg = forest.lightblue }
 
     return treesitter
