@@ -229,7 +229,7 @@ theme.loadTreeSitter = function ()
         TSNamespace = { fg = forest.blue }, -- For identifiers referring to modules and namespaces.
         TSOperator = { fg = forest.white }, -- For any operator: `+`, but also `->` and `*` in C.
         TSParameter = { fg = forest.white }, -- For parameters of a function.
-        TSParameterReference = { fg = forest.white }, -- For references to parameters of a function.
+        TSParameterReference = { fg = forest.lightblue }, -- For references to parameters of a function.
         TSProperty = { fg = forest.lightblue }, -- Same as `TSField`.
         TSPunctDelimiter = { fg = forest.white }, -- For delimiters ie: `.`
         TSPunctBracket = { fg = forest.white }, -- For brackets and parens.
