@@ -378,10 +378,10 @@ theme.loadPlugins = function()
 
                    
         -- Cmp
-        CmpItemKind = { fg = forest.gray },
+        CmpItemKind = { fg = forest.white },
         CmpItemAbbrMatch = { fg = forest.yellow, style = 'bold' },
         CmpItemAbbrMatchFuzzy = { fg = forest.yellow, style = 'bold' },
-        CmpItemAbbr = { fg = forest.gray },
+        CmpItemAbbr = { fg = forest.brown },
         CmpItemMenu = { fg = forest.gray },
                     
         -- Indent Blankline
