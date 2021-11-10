@@ -220,7 +220,7 @@ theme.loadTreeSitter = function ()
         TSConstMacro = { fg = forest.blue }, -- For constants that are defined by macros: `NULL` in C.
         TSError = { fg = forest.red }, -- For syntax/parser errors.
         TSException = { fg = forest.blue }, -- For exception related keywords.
-        TSField = { fg = forest.white }, -- For fields.
+        TSField = { fg = forest.lightblue }, -- For fields.
         -- For macro defined fuctions (calls and definitions): each `macro_rules` in Rust.
         TSFuncMacro = { fg = forest.blue },
         -- For includes: `#include` in C, `use` or `extern crate` in Rust, or `require` in Lua.
@@ -230,7 +230,7 @@ theme.loadTreeSitter = function ()
         TSOperator = { fg = forest.white }, -- For any operator: `+`, but also `->` and `*` in C.
         TSParameter = { fg = forest.white }, -- For parameters of a function.
         TSParameterReference = { fg = forest.white }, -- For references to parameters of a function.
-        TSProperty = { fg = forest.white }, -- Same as `TSField`.
+        TSProperty = { fg = forest.lightblue }, -- Same as `TSField`.
         TSPunctDelimiter = { fg = forest.white }, -- For delimiters ie: `.`
         TSPunctBracket = { fg = forest.white }, -- For brackets and parens.
         -- For special punctutation that does not fall in the catagories before.
@@ -260,7 +260,7 @@ theme.loadTreeSitter = function ()
     treesitter.TSFunction = { fg = forest.cyan } -- For fuction (calls and definitions).
     treesitter.TSMethod = { fg = forest.cyan } -- For method calls and definitions.
     treesitter.TSFuncBuiltin = { fg = forest.cyan }
-    treesitter.TSVariable = { fg = forest.lightblue } -- Any variable name that does not have another highlight.
+    treesitter.TSVariable = { fg = forest.white } -- Any variable name that does not have another highlight.
     treesitter.TSVariableBuiltin = { fg = forest.blue }
 
     return treesitter
