@@ -350,19 +350,19 @@ theme.loadPlugins = function()
         TelescopePreviewBorder = { fg = forest.forest14_gui },
         TelescopeSelectionCaret = { fg = forest.forest9_gui },
         TelescopeSelection = { fg = forest.blue },
-        TelescopeMatching = { fg = forest.forest8_gui },
+        TelescopeMatching = { fg = forest.yellow },
 
         -- NvimTree
-        NvimTreeRootFolder = { fg = forest.brightblue, style = "bold" },
-        NvimTreeGitDirty = { fg = forest.forest15_gui },
-        NvimTreeGitNew = { fg = forest.forest14_gui },
+        NvimTreeRootFolder = { fg = forest.white, style = "bold" },
+        NvimTreeGitDirty = { fg = forest.gray }, -- change maybe
+        NvimTreeGitNew = { fg = forest.brightcyan },
         NvimTreeImageFile = { fg = forest.brightcyan },
-        NvimTreeExecFile = { fg = forest.forest14_gui },
-        NvimTreeSpecialFile = { fg = forest.forest9_gui , style = "underline" },
-        NvimTreeFolderName = { fg = forest.lightblue },
+        NvimTreeExecFile = { fg = forest.brightmagenta },
+        NvimTreeSpecialFile = { fg = forest.brightmagenta , style = "underline" }, -- change maybe
+        NvimTreeFolderName = { fg = forest.brightblue },
         NvimTreeEmptyFolderName = { fg = forest.darkgray },
         NvimTreeFolderIcon = { fg = forest.yellow },
-        NvimTreeIndentMarker = { fg  = forest.darkgray },
+        NvimTreeIndentMarker = { fg  = forest.brightblue },
         LspDiagnosticsError = { fg = forest.red },
         LspDiagnosticsWarning = { fg = forest.brightyellow },
         LspDiagnosticsInformation = { fg = forest.white },
