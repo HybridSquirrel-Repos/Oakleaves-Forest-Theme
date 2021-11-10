@@ -202,6 +202,16 @@ end
 
 theme.loadTreeSitter = function ()
     -- TreeSitter highlight groups
+    treesitter.TSComment = { fg = forest.green }
+    treesitter.TSConditional = { fg = forest.blue } -- For keywords related to conditionnals.
+    treesitter.TSKeyword = { fg = forest.blue } -- For keywords that don't fall in previous categories.
+    treesitter.TSRepeat = { fg = forest.blue } -- For keywords related to loops.
+    treesitter.TSKeywordFunction = { fg = forest.cyan }
+    treesitter.TSFunction = { fg = forest.cyan } -- For fuction (calls and definitions).
+    treesitter.TSMethod = { fg = forest.cyan } -- For method calls and definitions.
+    treesitter.TSFuncBuiltin = { fg = forest.cyan }
+    treesitter.TSVariable = { fg = forest.white } -- Any variable name that does not have another highlight.
+    treesitter.TSVariableBuiltin = { fg = forest.blue }
 
     local treesitter = {
     -- For C++/Dart attributes, annotations thatcan be attached to the code to denote some kind of meta information.
@@ -229,7 +239,7 @@ theme.loadTreeSitter = function ()
         TSNamespace = { fg = forest.blue }, -- For identifiers referring to modules and namespaces.
         TSOperator = { fg = forest.white }, -- For any operator: `+`, but also `->` and `*` in C.
         TSParameter = { fg = forest.white }, -- For parameters of a function.
-        TSParameterReference = { fg = forest.lightblue }, -- For references to parameters of a function.
+        TSParameterReference = { fg = forest.white }, -- For references to parameters of a function.
         TSProperty = { fg = forest.lightblue }, -- Same as `TSField`.
         TSPunctDelimiter = { fg = forest.white }, -- For delimiters ie: `.`
         TSPunctBracket = { fg = forest.white }, -- For brackets and parens.
@@ -252,16 +262,6 @@ theme.loadTreeSitter = function ()
 
     }
 
-    treesitter.TSComment = { fg = forest.green }
-    treesitter.TSConditional = { fg = forest.blue } -- For keywords related to conditionnals.
-    treesitter.TSKeyword = { fg = forest.blue } -- For keywords that don't fall in previous categories.
-    treesitter.TSRepeat = { fg = forest.blue } -- For keywords related to loops.
-    treesitter.TSKeywordFunction = { fg = forest.cyan }
-    treesitter.TSFunction = { fg = forest.cyan } -- For fuction (calls and definitions).
-    treesitter.TSMethod = { fg = forest.cyan } -- For method calls and definitions.
-    treesitter.TSFuncBuiltin = { fg = forest.cyan }
-    treesitter.TSVariable = { fg = forest.white } -- Any variable name that does not have another highlight.
-    treesitter.TSVariableBuiltin = { fg = forest.blue }
 
     return treesitter
 
