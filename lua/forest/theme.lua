@@ -153,7 +153,7 @@ theme.loadEditor = function ()
         DashboardFooter = { fg = forest.forest14_gui, style = "italic" },
 
         -- BufferLine
-        BufferLineIndicatorSelected = { fg = forest.darkbrown },
+        BufferLineIndicatorSelected = { fg = forest.gray },
         BufferLineFill = { bg = forest.darkbrown },
 
     }
