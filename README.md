@@ -2,7 +2,7 @@
 # HybridSquirrel-Repos/Oakleaves-Forest-Theme.nvim 
 
 ## Neovim theme based off of the Jetbrains Dark Rider Theme
-original project fork form nord.nvim
+original project fork from nord.nvim
 
 
 
