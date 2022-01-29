@@ -1,13 +1,14 @@
 
-# shaunsingh/nord.nvim 
+# HybridSquirrel-Repos/Oakleaves-Forest-Theme.nvim 
 
-## Neovim theme based off of the [Nord Color Palette.](https://www.nordtheme.com/docs/colors-and-palettes)
+## Neovim theme based off of the Jetbrains Dark Rider Theme
+original project fork form nord.nvim
 
 ![118406380-d78ad580-b649-11eb-945c-5988fa717f39](https://user-images.githubusercontent.com/71196912/128029391-ad55fd41-d5f9-43bd-a795-c11b562f9d6d.jpg)
 
 ## Features
 
-Nord.nvim is meant to be a modern colorscheme written in lua for NeoVim that supports a lot of the new features
+Oakleaves-Forest-Theme.nvim is meant to be a modern colorscheme written in lua for NeoVim that supports a lot of the new features
 added to NeoVim like built-in LSP and [TreeSitter](https://github.com/nvim-treesitter/nvim-treesitter)
 
 + Supported plugins:
