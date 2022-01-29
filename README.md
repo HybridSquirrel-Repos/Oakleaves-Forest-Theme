@@ -4,7 +4,7 @@
 ## Neovim theme based off of the Jetbrains Dark Rider Theme
 original project fork form nord.nvim
 
-![118406380-d78ad580-b649-11eb-945c-5988fa717f39](https://user-images.githubusercontent.com/71196912/128029391-ad55fd41-d5f9-43bd-a795-c11b562f9d6d.jpg)
+
 
 ## Features
 
